@@ -10,6 +10,8 @@ text/JSON you want, and transform it with a handy dandy one liner.
 
 It also comes with a shorthand option `-j` to parse your input as JSON.
 
+Pro tip: You can use `lodash` inside your transform function.
+
 ## Examples
 
     echo 'foobar' | jsp 'text => text.toUpperCase()'
@@ -19,3 +21,7 @@ It also comes with a shorthand option `-j` to parse your input as JSON.
     echo '{"someNumbers":[1,2,3]}' | jsp -j 'json => json.someNumbers.map(n => n * 2)'
 
     > [2, 4, 6]
+
+    echo '["ding", "dong"]' | jsp -j 'json => _.reverse(json)'
+
+    > ["dong", "ding"]

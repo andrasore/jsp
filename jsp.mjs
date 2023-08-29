@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+import _ from "lodash";
+
 let script;
 try {
   script = eval(process.argv[process.argv.length - 1]);

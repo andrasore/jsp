@@ -13,11 +13,18 @@
     "type": "git",
     "url": "git+https://github.com/andrasore/jsp.git"
   },
-  "keywords": ["bash", "pipe", "script"],
+  "keywords": [
+    "bash",
+    "pipe",
+    "script"
+  ],
   "author": "Andras Sore",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/andrasore/jsp/issues"
   },
-  "homepage": "https://github.com/andrasore/jsp#readme"
+  "homepage": "https://github.com/andrasore/jsp#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
