@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 
-const script = eval(process.argv[process.argv.length - 1]);
+let script;
+try {
+  script = eval(process.argv[process.argv.length - 1]);
+} catch (err) {
+  showHelpAndExit();
+}
 
 const useJson = process.argv.includes("-j");
 
@@ -18,3 +23,14 @@ process.stdin
       console.log(script(bufferedInput));
     }
   });
+
+function showHelpAndExit() {
+  console.log(`Usage: jsp [options] <pipe function>
+
+Options:
+
+  -j : Parse input file as JSON
+
+Pipe function should parse to a valid Javascript function.`);
+  process.exit();
+}

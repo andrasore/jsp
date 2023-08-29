@@ -1,0 +1,23 @@
+{
+  "name": "jsp",
+  "version": "1.0.0",
+  "description": "A tool for processing files using Javascript one-liners",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "jsp": "./jsp.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrasore/jsp.git"
+  },
+  "keywords": ["bash", "pipe", "script"],
+  "author": "Andras Sore",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrasore/jsp/issues"
+  },
+  "homepage": "https://github.com/andrasore/jsp#readme"
+}
