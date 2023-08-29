@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
-const script = eval(process.argv[2]);
+const script = eval(process.argv[process.argv.length - 1]);
+
+const useJson = process.argv.includes("-j");
 
 const input = [];
 
@@ -10,5 +12,9 @@ process.stdin
   })
   .on("close", () => {
     const bufferedInput = Buffer.concat(input).toString();
-    console.log(script(bufferedInput));
+    if (useJson) {
+      console.log(script(JSON.parse(bufferedInput)));
+    } else {
+      console.log(script(bufferedInput));
+    }
   });
